@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>railway scene</title>
+<style type="text/css">
+     body{
+     	width:100%;
+     	height: 100%;
+     	 background: url('Images/rail2.png');
+		background-size: 50% 50%;
+     	margin-left: 0px;
+     	padding: 0px;
+     	display: flex;
+     	flex-direction: row;
+     	justify-content: center;
+     	overflow: hidden;
+             }
+	.container{
+		position: relative;
+		margin-top: 35px;
+		width: 100%;
+		height: 600px;
+		 background: url(Images/rail2.png);
+		background-size: 50% 50%;
+	}
+	.movingimage{
+		margin-top: 90px;
+		width: 300%;
+		height: 70%;
+		display: flex;
+		flex-direction: row;
+		flex: 4;
+	}
+	img{
+		width: 100%;
+		height: 100%;
+	}
+	.left{
+		position: absolute;
+		top :0% ;
+		left: 0%;
+		width: 33.3%;
+		height: 100%;
+		background:url(Images/rail2.png);
+		background-size: 100% 100%;
+		display: flex;;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.window{
+		position: absolute;
+		top: 90px;
+		left: 33.1%;
+		width:33.3%;
+		height: 69%;
+		border:4px solid #1b4f72;
+		border-radius: 2%;
+	}
+	.right{
+		position: absolute;
+		top: 0%;
+		left: 66.9%;
+		width:33.3%;
+		height: 100%;
+        background: url(Images/rail2.png);
+		background-size: 100% 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	hr{
+       margin-top: 60px;
+       height: 8px;
+       background:#273746;
+	}
+	.picture{
+		width: 350px;
+		height: 250px;
+		background: black;
+		margin-top: 20px;
+		border: 3px solid #1b4f72 ;
+		border-radius: 8px;
+		-webkit-transform-origin: 50% 0;
+		-webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		box-shadow: 5px 5px 3px grey;
+	}
+	.le{
+		background: url(Images/gal1.jpg);
+		background-size: 100% 100%;
+	}
+	.ri{
+
+		background: url(Images/gal2.jpg);
+		background-size: 100% 100%;
+	}
+	@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(3deg);}
+    50%{-webkit-transform: rotate(-3deg)}
+    100%{-webkit-transform: rotate(3deg);}
+}
+.holder{
+	width: 30px;
+	height: 25px;
+	background:  #1b4f72 ;
+	border-radius: 50%;
+    box-shadow: 2px 2px 2px grey ;
+}
+.mage1{
+	position: absolute;
+	top: 54%;
+	left: 0%;
+	width: 60px;
+	height: 250px;
+	background: #1b4f72;
+	border:2px solid grey;
+	border-top-right-radius: 30%;
+	transform: skewY(-40deg);
+}
+.mage2{
+	position: absolute;
+	top: 91%;
+	left: 30px;
+	width: 200px;
+	height: 55px;
+	background: #1b4f72;
+	transform: skewX(-50deg);
+	border: 2px solid grey;
+	border-top-right-radius: 40%;
+	border-top-left-radius: 5%;
+}
+.mager1{
+	position: absolute;
+	top: 54%;
+	right: 0%;
+	width: 60px;
+	height: 250px;
+	background:#1b4f72; 
+	transform: skewY(40deg);
+	border-top-left-radius: 30%;
+	border:2px solid grey;
+}
+.mager2{
+	position: absolute;
+	top: 91%;
+	right: 30px;
+	width: 200px;
+	height: 55px;
+	background: #1b4f72;
+	transform: skewX(50deg);
+	border-top-right-radius: 5%;
+	border-top-left-radius: 40%;
+	border:2px solid grey;
+}
+.table{
+	position: absolute;
+	top: 580px;
+	left:23.5%;
+	width: 51%;
+	height: 80px;
+	background:#1b4f72;
+	transform: skewY(0deg);
+	transform: skewX(-45deg);
+	border: 4px solid grey;
+	border-radius: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+.white1{
+	width: 30px;
+	height: 200px;
+	background: url(Images/white.png);
+	background-size: 100% 100%;
+	margin-top: 27px;
+	margin-left: 10px;
+	border-radius: 20%;
+
+}
+.white2{
+     width:150px;
+     height: 30px;
+    background: url(Images/white.png);
+	background-size: 100% 100%;
+     margin-top: 10px;
+	margin-left: 23px;
+	border-radius: 20%;
+}
+.white3{
+	width: 600px;
+	height: 60px;
+	background: url(Images/white.png);
+	background-size: 100% 100%;
+	border-radius: 50%;
+}
+.windowpart1{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 97.7%;
+	height: 0%;
+	background:yellow;
+	opacity: 1;
+	border-left:5px solid white;
+	border-right:5px solid white;
+	border-radius: 3%;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	opacity: .3;
+	border-opacity:1;
+    transition: 2s;
+}
+
+.windowpart2{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 97.7%;
+	height: 0%;
+	background-image: repeating-linear-gradient(white, #1b4f72 5%);
+	background-size: 100% 100%;
+	opacity: 1;
+	border-left:5px solid white;
+	border-right:5px solid white;
+	border-radius: 3%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+    transition: 2s;
+}
+.open{
+	height: 98%;
+	border: 5px solid white;
+}
+.pressparent{
+ position: absolute;
+ top: 54%;
+ left:45%;
+ width: 80px;
+ height: 80px;
+ background: white;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ border: 2px solid #1b4f72;
+ border-radius: 10%;
+ box-shadow: 2px 2px 2px 2px grey;
+}
+.press{
+
+	width: 30px;
+	height: 20px;
+	background: black;
+	margin: 10px;
+	margin-top: 30px;
+	box-shadow: 1px 1px 1px 1px grey;
+	cursor: pointer;
+	border-radius: 10%;
+	transition-duration: .7s;
+}
+.hello{
+	box-shadow: none;
+	transform: translateX(2px);
+	background:#1b4f72; 
+	border-radius: 50%;
+}
+.human{
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	width: 80px;
+	height: 90px;
+	background:#FFCD94;
+	border-radius: 50%;
+	box-shadow: -1px 1px 1px 1px white;
+}
+.neck{
+	position: absolute;
+	top: 63%;
+	left: 21.3%;
+	width: 25px;
+	height: 30px;
+	background:#FFCD94;
+	transform: skewY(-30deg);
+}
+.stomach{
+	position: absolute;
+	top: 67%;
+	left: 15%;
+	width: 80px;
+	height: 153px;
+	background: black;
+	transform: skewY(-35deg);
+	border-radius: 10%;
+}
+.leftleg{
+	position: absolute;
+	top: 93%;
+	left: 20%;
+	width: 125px;
+	height: 25px;
+	background: grey;
+	border-radius: 10%;
+	transform: skewX(-53deg);
+	border-top-right-radius: 40%;
+}
+.rightleg{
+	position: absolute;
+	top: 88.9%;
+	left: 29%;
+	width: 120px;
+	height: 22px;
+	background: grey;
+	border-radius: 10%;
+	transform: skewX(-53deg);
+	border-top-right-radius: 43%;
+	border-bottom-right-radius: 15%;
+}
+.tang1{
+	position: absolute;
+	top: 95%;
+	left: 45%;
+	width: 25px;
+	height: 80px;
+	background: grey;
+	transform: skewY(-35deg);
+	border-top-right-radius: 20%;
+	border-top-left-radius: 20%;
+}
+.tang2{
+	position: absolute;
+	top: 91%;
+	left: 52%;
+	width: 25px;
+	height: 80px;
+	background:grey;
+	transform: skewY(-35deg);
+	border-top-right-radius: 15%;
+	border-top-left-radius: 20%;
+}
+.eye{
+	z-index: 1;
+	position: absolute;
+	top: 26%;
+	left: 60%;
+	width: 20px;
+	height: 20px;
+	background: black;
+	border-radius: 50%;
+}
+.eye-brow{
+	z-index: 1;
+     position: absolute;
+	top: 20%;
+	left: 54%;
+	width: 30px;
+	height: 20px;
+	background: #FFCD94;
+	border-top: 2px solid black;
+	border-top-right-radius: 50%;
+	border-top-left-radius:50%;
+}
+.cornia{
+	 position: absolute;
+	top: 20%;
+	left: 35%;
+	width: 11px;
+	height: 11px;
+	background: white;
+	border-radius: 50%;
+}
+.triangle-right {
+	z-index: 1;
+	position: absolute;
+	top:54%;
+	left: 80%;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-right: 16px solid black;
+	border-bottom: 8px solid transparent;
+	border-top-right-radius:10%;
+	border-bottom-right-radius: 50%;
+}
+.rect1{
+	position: absolute;
+	top:49%;
+	left: 14.5%;
+	width:80px;
+	height: 40px;
+	background: black;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+	border: solid grey 2px;
+}
+.rect2{
+	z-index: 1;
+    position: absolute;
+	top:56%;
+	left: 14.5%;
+	width:41px;
+	height: 50px;
+	background: black;
+	border: solid grey 2px;
+	border-top:none;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 10%;
+}
+.humanr{
+	position: absolute;
+	top: 50%;
+	right: 15%;
+	width: 80px;
+	height: 90px;
+	background:#FFCD94;
+	border-radius: 50%;
+	box-shadow: -1px 1px 1px 1px white;
+}
+.stomachr{
+	position: absolute;
+	top: 67%;
+	right: 15%;
+	width: 80px;
+	height: 153px;
+	background: black;
+	transform: skewY(35deg);
+	border-radius: 10%;
+}
+.neckr{
+	position: absolute;
+	top: 63%;
+	right: 21.3%;
+	width: 25px;
+	height: 30px;
+	background:#FFCD94;
+	transform: skewY(30deg);
+}
+.leftlegr{
+	position: absolute;
+	top: 93%;
+	right: 20%;
+	width: 125px;
+	height: 25px;
+	background: grey;
+	border-radius: 10%;
+	transform: skewX(53deg);
+	border-top-left-radius: 40%;
+}
+.rightlegr{
+	position: absolute;
+	top: 88.9%;
+	right: 29%;
+	width: 120px;
+	height: 22px;
+	background: grey;
+	border-radius: 10%;
+	transform: skewX(53deg);
+	border-top-left-radius: 43%;
+	border-bottom-right-radius: 15%;
+}
+.rect1r{
+	position: absolute;
+	top:49%;
+	right: 14.5%;
+	width:80px;
+	height: 40px;
+	background: black;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+	border: solid grey 2px;
+}
+.rect2r{
+	z-index: 1;
+    position: absolute;
+	top:56%;
+	right: 14.5%;
+	width:41px;
+	height: 50px;
+	background: black;
+	border: solid grey 2px;
+	border-top:none;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 10%;
+}
+.tang1r{
+	position: absolute;
+	top: 95%;
+	right: 45%;
+	width: 25px;
+	height: 80px;
+	background: grey;
+	transform: skewY(35deg);
+	border-top-right-radius: 5%;
+	border-top-left-radius: 30%;
+}
+.tang2r{
+	position: absolute;
+	top: 91%;
+	right: 52%;
+	width: 25px;
+	height: 80px;
+	background:grey;
+	transform: skewY(35deg);
+	border-top-right-radius: 5%;
+	border-top-left-radius: 20%;
+}
+.eyer{
+	z-index: 1;
+	position: absolute;
+	top: 26%;
+	right: 60%;
+	width: 20px;
+	height: 20px;
+	background: black;
+	border-radius: 50%;
+}
+.eye-browr{
+	z-index: 1;
+     position: absolute;
+	top: 20%;
+	right: 54%;
+	width: 30px;
+	height: 20px;
+	background: #FFCD94;
+	border-top: 2px solid black;
+	border-top-right-radius: 50%;
+	border-top-left-radius:50%;
+}
+.corniar{
+	 position: absolute;
+	top: 20%;
+	right: 35%;
+	width: 11px;
+	height: 11px;
+	background: white;
+	border-radius: 50%;
+}
+.triangle-rightr {
+	z-index: 1;
+	position: absolute;
+	top:54%;
+	right: 80%;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-left: 16px solid black;
+	border-bottom: 8px solid transparent;
+	border-top-left-radius:10%;
+	border-bottom-left-radius: 50%;
+}
+}
+</style>
+</head>
+<body>
+<div class="container"> 
+   <div class="movingimage">
+   	<img src="Images/rail1.jpeg">
+   	<img src="Images/rail3.jpg">
+   	<img src="Images/rail4.jpg">
+   	<img src="Images/rail5.jpg">
+   	<img src="Images/rail6.jpg">
+   	<img src="Images/rail7.jpg">
+   	<img src="Images/rail8.jpeg">
+   	<img src="Images/rail9.jpg">
+   </div>
+   <div class="left">
+   <div class="pressparent">
+   <div class="press"></div>
+   <div class="press"></div>
+   </div>
+   <div class="mage1">
+   <div class="white1"></div>
+   </div>
+   <div class="mage2">
+   		<div class="white2"></div>
+   </div>
+   	<div class="picture le">
+   		<div class="holder"></div>
+   	</div>
+   	<div class="human">
+   	    <div class="triangle-right"></div>
+   	    <div class="eye-brow"></div>
+   		<div class="eye">
+   			<div class="cornia"></div>
+   		</div>
+   	</div>
+   	<div class="rect1"></div>
+   	<div class="rect2"></div>
+   	<div class="neck"></div>
+   	<div class="stomach"></div>
+   	<div class="leftleg"></div>
+   	<div class="rightleg"></div>
+   	<div class="tang1"></div>
+   	  	<div class="tang2"></div>
+   </div>
+   <div class="window">
+   	      <hr><hr><hr><hr><hr>
+    	 <div class="windowpart1">
+    	 </div>
+   	      <div class="windowpart2"></div>
+   </div>
+ 
+
+   <div class="right">
+    <div class="mager1">
+    	<div class="white1"></div>
+    </div>
+   <div class="mager2">
+   		<div class="white2"></div>
+   </div>
+   	<div class="picture ri">
+   	<div class="holder"></div>
+   	</div>
+   		<div class="humanr">
+   	    <div class="triangle-rightr"></div>
+   	    <div class="eye-browr"></div>
+   		<div class="eyer">
+   			<div class="corniar"></div>
+   		</div>
+   	</div>
+   	<div class="rect1r"></div>
+   	<div class="rect2r"></div>
+   	<div class="neckr"></div>
+   	<div class="stomachr"></div>
+   	<div class="leftlegr"></div>
+   	<div class="rightlegr"></div>
+   	<div class="tang1r"></div>
+   	  	<div class="tang2r"></div>
+   </div>
+   </div>
+   	<div class="table">
+   		<div class="white3"></div>
+   	</div>
+</div>
+<script>
+     let l=6;
+	const movingimage = document.querySelector('.movingimage');
+	const button = document.querySelectorAll('.press');
+	const windowpart1 = document.querySelector('.windowpart1');
+	const windowpart2 = document.querySelector('.windowpart2');
+	
+	
+	button[0].addEventListener("click",function(){
+        this.classList.toggle("hello");
+        windowpart1.classList.toggle("open");
+	});
+	button[1].addEventListener("click",function(){
+		this.classList.toggle("hello");
+        windowpart2.classList.toggle("open");
+	});
+	movingimage.style.transform = "translate(-820px, 0px)";
+	let i = 0;
+	setInterval(function () {
+		if(i<4250)
+		{
+	          let mov = movingimage.style.transform = "translate(" + (i + -4000) + "px, 0px)"; i = i+5;
+	    }
+	    else
+	  	clearInterval(mov);
+          },100);
+
+</script>
+</body>
+</html>
